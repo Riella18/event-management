@@ -11,11 +11,13 @@ class Event extends Model
 {
     use HasFactory;
 
-    public function user() : BelongsTo {
+    public function user(): BelongsTo
+    {
         return $this->belongsTo(User::class);
     }
 
-    public function attendees(): HasMany {
+    public function attendees(): HasMany
+    {
         return $this->hasMany(Attendee::class);
     }
 }
