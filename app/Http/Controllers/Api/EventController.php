@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Event;
+use App\Models\User;
 
 class EventController extends Controller
 {
@@ -12,7 +14,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        return \App\Models\Event::all();
     }
 
     /**
@@ -28,7 +30,7 @@ class EventController extends Controller
      */
     public function show(string $id)
     {
-        //
+        // return $event; 
     }
 
     /**
